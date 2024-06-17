@@ -4,7 +4,7 @@ This is a movie application that stores data in a MongoDB database and through G
 
 ## Demo Video
 
-To view the demo video of the application click here: [Click Video]https://www.loom.com/share/032fcc67cb1041fdbdefa6fed598c1ab
+To view the demo video of the application click here: [Video]https://www.loom.com/share/032fcc67cb1041fdbdefa6fed598c1ab
 
 ### Notes:
 
