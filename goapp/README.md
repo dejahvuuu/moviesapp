@@ -88,14 +88,82 @@ Response
 
 ```
 
-Get Movies `GET`
+Create Movie `POST`
 ```Shell
-Get Movies http://localhost:9000/api/movies
+http://localhost:9000/api/movies/createmovie
+
+Body
+{
+    "name": "Cars",
+	"topic": "Anime",
+    "movie_url": "https://www.youtube.com/watch?v=5PyfOmajUu0",
+    "movie_id": "3"
+}
 
 header:
 "token" : 'The token that the user returns after logging in, the user must be of type ADMIN.'
 
 ```
+
+Get Movies `GET`
+```Shell
+http://localhost:9000/api/movies
+
+header:
+"token" : 'The token that the user returns after logging in, the user must be of type ADMIN.'
+
+```
+
+Get Movie by ID `GET`
+```Shell
+http://localhost:9000/api/movies/{{movieid}}
+
+header:
+"token" : 'The token that the user returns after logging in, the user must be of type ADMIN.'
+
+```
+
+Update Movie `PUT`
+```Shell
+http://localhost:9000/api/movies/{{_id}}
+
+Body
+{
+	"name": "Cars version 3.0",
+    "topic": "Ciencia Ficcion",
+    "movie_url": "https://www.youtube.com/watch?v=TTgk_iT8Uts"
+}
+
+header:
+"token" : 'The token that the user returns after logging in, the user must be of type ADMIN.'
+```
+Delete Movie `DELETE`
+```Shell
+http://localhost:9000/api/movies/{{movieid}}
+
+header:
+"token" : 'The token that the user returns after logging in, the user must be of type ADMIN.'
+```
+
+
+Get Users `GET`
+```Shell
+http://localhost:9000/api/users
+
+header:
+"token" : 'The token that the user returns after logging in, the user must be of type ADMIN.'
+```
+
+Get User by ID `GET`
+```Shell
+http://localhost:9000/api/users/{{user_id}}
+
+header:
+"token" : 'The token that the user returns after logging in, the user must be of type ADMIN.'
+```
+
+
+
 
 
 
