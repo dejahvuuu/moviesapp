@@ -1,0 +1,1 @@
+This is a movie application that stores data in a MongoDB database and through Golang exposes that data with REST API to be consumed by a Flutter application.
