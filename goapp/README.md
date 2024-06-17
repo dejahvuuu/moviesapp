@@ -45,24 +45,56 @@ Install POSTMAN [Postman](https://www.postman.com/downloads/)
 
 #### Endpoints API
 
-Users register
+Users register `POST`
 ```Shell
 http://localhost:9000/api/users/register
 
 Body
 {
-    "name": "Pedro",
-	"username": "dpeter",
-    "email": "peter@gmail.com",
+    "name": "Alberto Galvis",
+	"username": "dejahvuuu",
+    "email": "dejahvuuu@gmail.com",
     "password": "mypassword",
     "user_type": "ADMIN"
 }
 
 ```
 
-
+Users login `POST`
 ```Shell
 http://localhost:9000/api/users/login
+
+Body
+{
+    "email": "dejahvuuu@gmail.com",
+	"password": "mypassword"
+}
+
+
+Response
+{
+    "ID": "666cfc9894f2602c966277ba",
+    "name": "Alberto Galvis",
+    "username": "dejahvuuu",
+    "password": "$2a$14$kJblR1SnhO6XKJOqeLuP/ecH8D9KdFiquweORFa4luowC7ZX30sJu",
+    "email": "dejahvuuu@gmail.com",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImRlamFodnV1dUBnbWFpbC5jb20iLCJOYW1lIjoiQWxiZXJ0byBHYWx2aXMiLCJVc2VybmFtZSI6ImRlamFodnV1dSIsIlVpZCI6IjY2NmNmYzk4OTRmMjYwMmM5NjYyNzdiYSIsIlVzZXJfdHlwZSI6IkFETUlOIiwiZXhwIjoxNzE4NjgwMTI3fQ.hNhs1l9ZjyPEcEomgScWx8j28ecg_CMSJbWh2ruE0eM",
+    "user_type": "ADMIN",
+    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6IiIsIk5hbWUiOiIiLCJVc2VybmFtZSI6IiIsIlVpZCI6IiIsIlVzZXJfdHlwZSI6IiIsImV4cCI6MTcxODk5NjkyN30.H8_0jC-HtcP0viPwArbrtHsGHq47OD-0rJo_LHkugUk",
+    "created_at": "2024-06-15T02:29:44Z",
+    "updated_at": "2024-06-17T15:08:47Z",
+    "user_id": "666cfc9894f2602c966277ba"
+}
+
+```
+
+Get Movies `GET`
+```Shell
+Get Movies http://localhost:9000/api/movies
+
+header:
+"token" : 'The token that the user returns after logging in, the user must be of type ADMIN.'
+
 ```
 
 
